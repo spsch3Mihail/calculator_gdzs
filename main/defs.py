@@ -11,6 +11,5 @@ def calculator():
     time_on_exit = time_now + delta_time
     comeback_time = time_now + total_time
     return f' Pmax.пад = {max_press_drop}, Рк.вых =  {press_ctrl_exit}, Дельта Т = {delta_time}, Тобщ = {total_time}, Т вых = {time_on_exit}, Т возвр = {comeback_time}'
-
 print(calculator())
 
