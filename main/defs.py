@@ -3,9 +3,12 @@ import flet as ft
 
 
 def main(page: ft.Page):
-    t = ft.Text(value='Hello world!', color='green' )
-    page.controls.append(t)
-    page.update()
+    page.add(
+        ft.Row(controls=[
+            ft.TextField(label='Enter min press'),
+            ft.ElevatedButton(text='Enter')
+        ])
+    )
 
 
 ft.app(target=main, view=ft.WEB_BROWSER)
