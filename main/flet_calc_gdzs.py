@@ -3,7 +3,6 @@ from datetime import timedelta
 
 
 def main(page):
-    greetings = ft.Column()
     def calculator(e):
         press_min = int(min_press.value)
         time_now = timedelta(hours=int(hours.value), minutes=int(minutes.value))
@@ -18,19 +17,22 @@ def main(page):
         page.update()
 
 
-    min_press = ft.TextField(label='введите минимальное давление:')
-    hours = ft.TextField(label='Введите часы:')
-    minutes = ft.TextField(label='Введите минуты:')
+    min_press = ft.TextField(label='введите минимальное давление:', width=280, helper_text='Введите время включения в НДС:')
+    hours = ft.TextField(label='Введите часы:', width=280, hint_text='от 0 до 24')
+    minutes = ft.TextField(label='Введите минуты:', width=280,hint_text='от 0 до 60')
 
 
 
     d = ft.TextField(label='Результат')
-    c = ft.TextButton(text='Рассчитать', on_click=calculator)
-    e = ft.Text('asa')
+    c = ft.ElevatedButton(text='Рассчитать', on_click=calculator,
+                          bgcolor=ft.colors.BLACK, color=ft.colors.WHITE)
+
+    page.controls.append(ft.Text('Калькулятор ГДЗС v1.0',style=ft.TextThemeStyle.DISPLAY_SMALL))
+    # page.controls.pop()
     page.update()
     page.add(ft.Column([min_press, hours, minutes, c, d]))
 
 
-ft.app(target=main),
+ft.app(target=main)
 
 
