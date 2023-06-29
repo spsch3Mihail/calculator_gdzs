@@ -3,11 +3,33 @@ import flet as ft
 
 
 def main(page: ft.Page):
+    page.title = 'Flet counter example'
+    page.vertical_alignment = 'center'
+    result = ft.Text(value="0")
+
     page.add(
+        ft.Row(controls=[result]),
         ft.Row(controls=[
             ft.TextField(label='Enter min press'),
             ft.ElevatedButton(text='Enter')
-        ])
+
+        ],
+            alignment='center'
+        ),
+        ft.Row(controls=[
+            ft.TextField(label='Enter Hours'),
+            ft.ElevatedButton(text='Enter')
+
+        ],
+            alignment='center'
+        ),
+        ft.Row(controls=[
+            ft.TextField(label='Enter minutes'),
+            ft.ElevatedButton(text='Enter')
+
+        ],
+            alignment='center'
+        )
     )
 
 
