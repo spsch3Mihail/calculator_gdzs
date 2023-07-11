@@ -29,8 +29,8 @@ def main(page):
 
     page.controls.append(ft.Text('Калькулятор ГДЗС v1.0',style=ft.TextThemeStyle.DISPLAY_SMALL))
     # page.controls.pop()
-    page.add(ft.Column([min_press, hours, minutes, c, d]))
     page.update()
+    page.add(ft.Column([min_press, hours, minutes, c, d]))
 
 
 
